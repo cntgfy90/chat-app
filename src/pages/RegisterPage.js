@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class RegisterPage extends Component {
-	render() {
-		return (
-			<div>Hello World!</div>
-		);
-	}
+  render() {
+    return <div>Hello World!</div>;
+  }
 }
 
 export default RegisterPage;

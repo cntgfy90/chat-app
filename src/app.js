@@ -1,8 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './routes/AppRoutes';
+import App from "./routes/AppRoutes";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
-module.hot.accept();
+if (module.hot) {
+	console.log(module);
+	module.hot.accept('./routes/AppRoutes', () => {
+		ReactDOM.render(<App />, document.getElementById("root"));
+	});
+}

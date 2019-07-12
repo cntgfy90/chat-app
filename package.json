@@ -7,13 +7,14 @@
     "lint": "npx eslint --fix ./src/**/*.js",
     "format": "npx prettier --write ./src/**/*.js",
     "build": "npx webpack --config webpack.config.js",
-    "start": "npx webpack --watch & npx webpack-dev-server --config webpack.config.js"
+    "start": "npx webpack-dev-server --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.5.1",
+    "@hot-loader/react-dom": "^16.8.6",
     "@material-ui/core": "^4.2.0",
     "@material-ui/icons": "^4.2.1",
     "react": "^16.8.6",
@@ -38,6 +39,9 @@
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "postcss-cssnext": "^3.1.0",
@@ -48,7 +52,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylelint": "^10.1.0",
-    "webpack": "^4.35.2",
+    "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
   }

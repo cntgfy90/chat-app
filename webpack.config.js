@@ -13,9 +13,6 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'main.[hash].js',
-		// Avoid regenerating hot update configs on every hot update
-		hotUpdateChunkFilename: 'hot/hot-update.js',
-		hotUpdateMainFilename: 'hot/hot-update.json'
 	},
 	devtool: isProduction ? false : 'inline-source-map',
 	devServer: {
@@ -27,6 +24,11 @@ module.exports = {
 	},
 	externals: {
 		'material-ui': 'window["material-ui"]'
+	},
+	resolve: {
+		alias: {
+			'react-dom': '@hot-loader/react-dom'
+		}
 	},
 	module: {
 		rules: [
