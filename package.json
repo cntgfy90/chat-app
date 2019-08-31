@@ -7,7 +7,7 @@
     "lint": "npx eslint --fix ./src/**/*.js",
     "format": "npx prettier --write ./src/**/*.js",
     "build": "npx webpack --config webpack.config.js",
-    "start": "npx webpack-dev-server --config webpack.config.js"
+    "start": "npx webpack-dev-server"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,9 @@
     "@material-ui/icons": "^4.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.0.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",

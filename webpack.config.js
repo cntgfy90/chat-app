@@ -21,6 +21,7 @@ module.exports = {
 		open: 'chrome',
 		overlay: true,
 		hot: true,
+		historyApiFallback: true,
 	},
 	externals: {
 		'material-ui': 'window["material-ui"]'
@@ -36,20 +37,8 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					'style-loader',
-					{ loader: 'css-loader', options: { importLoaders: 1 } },
-					{
-						loader: 'postcss-loader',
-						options: {
-							ident: 'postcss-loader',
-							plugins: loader => [
-								require('cssnano')(),
-								require('stylelint')(),
-								require('autoprefixer')(),
-								require('postcss-cssnext')(),
-								require('postcss-font-magician')()
-							]
-						}
-					}
+					'css-loader',
+					'postcss-loader'
 				]
 			},
 			{
